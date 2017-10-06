@@ -1,0 +1,35 @@
+Race condition
+
+Threads competing with each other to finish the program. During the process,
+they might override the memory for other threads.
+
+example:
+
+I1: thread_num = omp_get_thread_num()
+I2: print *, thread num
+
+Thread order: 0 3 1 2
+
+One random simulation without critical block:
+
+t = 1, I1 by thread 0	thread_num = 0
+t = 2, I1 by thread 3	thread_num = 3
+t = 3, I2 by thread 0	thread_num = 3   print 3
+t = 4, I1 by thread 2	thread_num = 2
+t = 5, I1 by thread 1	thread_num = 1
+t = 6, I2 by thread 1	thread_num = 1	 print 1
+t = 7, I2 by thread 2	thread_num = 1   print 1
+t = 8, I2 by thread 3	thread_num = 1   print 1
+
+Thread order: 0 3 1 2
+
+One random simulation with critical block:
+
+t = 1, I1 by thread 0	thread_num = 0
+t = 2, I2 by thread 0	thread_num = 0   print 0
+t = 3, I1 by thread 3	thread_num = 3   
+t = 4, I2 by thread 3	thread_num = 3   print 3
+t = 5, I1 by thread 1	thread_num = 1
+t = 6, I2 by thread 1	thread_num = 1	 print 1
+t = 7, I1 by thread 2	thread_num = 2   
+t = 8, I2 by thread 2	thread_num = 2   print 2

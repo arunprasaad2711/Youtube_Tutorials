@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep  2 03:08:21 2015
+
+@author: arun
+"""
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
+import numpy as np
+
+# set up Miller map projection
+# For mercator projection, do not push latitudes beyond +/- 80
+# llcrnr = lower left corner
+# urcrnr = upper right corner
+# l = lower resolution, c = coarse
+
+# longitude limits. For setting Limits and Centering
+l1 = -20
+l2 = 60
+
+# latitude limits. For setting Limits only; No Centering
+r1 = 30
+r2 = 75
+
+#map = Basemap(projection='laea', lat_0 = 20, lon_0 = 50, llcrnrlat=r1,urcrnrlat=r2,\
+#            llcrnrlon=l1,urcrnrlon=l2, resolution='l')
+map = Basemap(projection='ortho', lat_0 = 20, lon_0 = 50, resolution='l')
+
+# draw coastlines, country boundaries, fill continents, draw states.
+map.drawcoastlines(linewidth=1.0)
+map.drawcountries(linewidth=0.25)
+#map.fillcontinents(color='coral',lake_color='aqua')
+map.drawstates()
+
+# draw the edge of the map projection region (the projection limb)
+map.drawmapboundary()
+# draw lat/lon grid lines every 30 degrees.
+
+#map.drawmeridians(np.arange(-180,180,30),labels=[0,0,1,0])
+#map.drawparallels(np.arange(-90,90,30),labels=[0,1,0,0])
+map.drawmeridians(np.arange(-180,180,30))
+map.drawparallels(np.arange(-90,90,30))
+# Grid lines. Meridians are vertical lines
+# Parallels are horizontal lines
+# Label notations = left, right, top, bottom
+
+nlats = 73
+nlons = 145
+lats = np.linspace(r1, r2, nlats)
+lons = np.linspace(l1, l2, nlons)
+# Position longitudes accordingly for centering in the map!
+
+lon, lat = np.meshgrid(lons, lats) # lon-lat grids!
+
+x, y = map(lon, lat) # x-y map grid in meters!
+
+z = lon**2 + lat**2 # some data to plot!
+
+#plt.contourf(lon, lat, z, 15) 
+# This won't work because you do not have map objects for axis
+plt.contourf(x, y, z, 15)
+# This works
+#plt.grid()
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.suptitle("Map Plotting!")
+plt.title('Miller Projection')
+#print x
+# This works because x and y are map objects

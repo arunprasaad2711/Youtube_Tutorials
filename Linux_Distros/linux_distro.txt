@@ -1,0 +1,106 @@
+In detail about linux Distros.
+
+What is Linux?
+    It is an OS targetting programmers, developers, IT professionals, Scientific community users etc.,
+    
+How is it different from Unix?
+    It is a software copy of Unix, with many more features
+
+What is a Linux Distro?
+    Linux Kernel + core linux software + package manager + (UI software) + (Desktop software) = Linux Distro
+    
+What is the difference between the distros?
+    - Way they perform operations under the hood
+    - Purpose of creation
+    - Target audience
+    - Software repositories
+    
+Major Linux Families
+    Arch
+        Manjaro
+        Antergos
+        .......
+    Debian
+        Ubuntu
+            Ubuntu Derivatives
+        Knoppix
+            Backtrack - Kali
+        .......
+    Slackware Linux
+        SUSE - OpenSUSE
+        .......
+    Redhat
+        RHEL - paid/licensed
+        Fedora
+        Centos
+        .......
+    Enoch
+        - Gentoo
+        ........
+    ............
+    Android
+        ........
+        
+Which Distro should I choose? (my opinions)
+    For starters:
+        Desktop based. (Preferrably Debian Family)
+        - Help you kick start with many software already existing or easy to install
+        - Not required to know the system deeper
+        - Most aesthetic customization, least software customization
+    Intermediate users:
+        (my suggestions) Redhat, Fedora, CentOS
+        - Not all software might be available, may need to compile, build and install some.
+        - Need to know the system a bit deeper
+        - intermediate aesthetic customization, intermediate software customization
+    Hard core users:
+        Arch, Debian, Slackware, Gentoo
+        - You have the core software only, others have to be installed or built manually
+        - Need to know the system much more deeper
+        - Least aesthetic customization, Most software customization
+        
+    General Considerations:
+        - Availability of Software user requires
+        - Degree of User preferred customization (aesthetic and software)
+        - Motive behind the original distros' existence
+        - Point version or Rolling Version
+
+What is a Rolling version Distro?
+    - No specific OS version. OS gets updated every now and then.
+    - Only certain snapshots(reference versions) are called OS versions
+    - One gets the bleeding-edge (most updated and recent) software
+    eg: Arch, Gentoo
+    
+What is a Point version Distro?
+    - Specific versions, with some limited software, OS updates
+    - Usually stable,
+    - Bleeding edge available only in the next version
+    - Have to install from scratch or upgrade entire OS every now and then
+    eg: Fedora, Ubuntu, etc.,
+
+What is a package manager?
+    Software to install, remove, build, compile, update, upgrade software packages and even OS kernels
+    eg: apt, yast, yum, aptitude, dnf, synaptic, aur, pamac, octopi, yaourt
+
+Why there are so many package managers?
+    Development method, internal architecture being different for different linux kernels.
+    
+What is a linux desktop?
+    The GUI software for the OS.
+    eg: Unity, Gnome, KDE, Budgie, XFCE, Pantheon, Deepin, LXQT, Mate, cinnamon, Enlightenment, etc.,
+    
+What is the difference between desktop?
+    - Shortcuts
+    - Customization
+    - Resource usage
+    - Hardware capacity
+    - look and feel
+    - Features
+    - Software bundles
+
+What desktop should I choose?
+    - Refer above question,
+    - 
+    .................
+    - Stability,
+    - Development progress, direction
+

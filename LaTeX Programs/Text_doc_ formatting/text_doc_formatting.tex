@@ -1,0 +1,234 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{color}
+\usepackage{latexsym}
+
+\setlength{\parindent}{4em}
+% Set the Paragraph indent
+% 1 em means the length of 1 letter "m" in the current font size.
+\setlength{\parskip}{1em}
+% Set the distance between paragraphs
+\renewcommand{\baselinestretch}{2.0}
+% Set the line spacing. 2 means twice the normal spacing
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Arun Prasaad Gunasekaran}
+\title{Text and Document Formatting}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Text Styles}
+%\slshape %slant font
+%\textsl{} % for a small content
+%\textup{} %default font
+%\upshape
+%\itshape %italic font
+%\textit{}
+
+%\scshape % Capitalize
+%\textsc{}
+%\mdseries % default medium size
+%\textmd
+%\bfseries % Bold font
+%\textbf{}
+
+%\rmfamily % Regular roman font
+%\textrm{}
+%\sffamily % Sans Serif Font
+%\textsf{}
+%\ttfamily % Type writer font
+%\texttt{}
+
+%\rm %roman font
+%\it % italic
+%\em %emphasis
+%\bf % bold
+%\sl %slant 
+%\sc %small caps
+%\sf %Sans serif font
+%\tt % type writer font
+
+Text emphasis is given using \textbf{Commands (Like this!)} and \textit{functions (Like this!)}. The purpose of \textsc{Commands and functions (Like This!)} here, is to enable certain contents \textsf{distinguished} from other contents. These commands \textsl{enhance reading} as they make contents \texttt{stand out} uniquely!
+
+\emph{This sentence is \emph{emphasized!}}
+
+\color{red}
+
+This sentence is in red!
+
+\color{black}
+
+%\itshape
+You can change the text font as well. \textup{"This"} is the normal font! \textmd{"This"} is the medium size! \textrm{"This"} is the regular font family
+
+Font sizes can be changed!\\ 
+%\tiny Size\\ 
+%\scriptsize Size \\
+%\footnotesize Size \\
+%\small Size\\
+%\normalsize Size\\
+%\large Size\\
+%\Large Size\\
+%\LARGE Size\\
+%\huge Size\\
+%\Huge Size\\
+
+\section{Special Symbols}
+
+\$ \% \# \{ \& \_ are special symbols. G\"ottingen
+
+\t{oo}
+
+\AA \oe \dag \ddag
+
+\pounds   \copyright
+
+$\pi \ \Pi$
+
+$\sigma \ \Sigma$
+
+$ \Xi \ \vartheta$
+
+$\mathcal{F} \mathcal{L}$
+
+$ x \not \ge y$
+
+$ \pm \mp $
+
+$ A \cap B$
+
+$ \Delta ABC \equiv \Delta DEF$
+
+$ A \gg B \  C \propto D$
+
+$ \Longleftrightarrow $
+
+$ \nabla \surd \partial$
+
+$ \Box \ \Diamond$
+
+$ \backslash $
+
+$ \clubsuit \diamondsuit \heartsuit \spadesuit$
+
+$ \int^b_a $
+
+$\displaystyle{\oint \limits^b_a}$
+
+$ \displaystyle{\lim \limits_{x \to 0} \frac{\sin{x}}{x} = 1}$
+
+$ \vec{A} = a_1\vec{i} + a_2\vec{j} + a_3\vec{k}$
+
+$ \lim \limits_{x \to 0} \frac{\sin{x}}{x} = 1$
+
+$\lg \gcd$
+
+\( \lim \limits_{n \rightarrow \infty} \)
+
+$ \lim \limits_{n \rightarrow \infty}$
+
+$$ \lim \limits_{n \rightarrow \infty}$$
+
+\[ \lim \limits_{n \rightarrow \infty} \]
+
+$$ \lim_{n \rightarrow \infty} $$
+
+\section{Document Formatting}
+
+\subsection{Spacing}
+Spacing is possible using the backslash command. For instance, if you want to write something like Zuckerberg and co.\ \ \ \ \ and proceed writing, you might see an additional space.
+
+\hspace{5cm} hspace command is used for making a space horizontally. While \vspace{2cm} is used for making space vertically. 
+
+\hfill Hfill command is used to fill the sentence accordingly, so that the right margin is fine!
+
+\subsection{Document Symbols}
+Quotations are easy! Use '' for quotations 'like this one' "or this one" For the quote to "open" and "close" properly, use reverse quotes ``Like this"\\
+
+Use --- for a long dash! use \TeX and \LaTeX for TeX and LaTeX symbols.\\
+
+For underlining, use \underline{Underline command}. For overhead and under-head symbols, use $\overbrace{O}  \underbrace{U}  \overbrace{\underbrace{B}} $
+
+\section{Document sections}
+
+\subsection{Foot notes}
+
+To type a foot note, use "footnote" \footnote{This is a command for foot notes} option.
+
+To write a paragraph, use paragraph command to name it
+
+\subsection{Paragraphs and Subparagraphs}
+
+\paragraph{Paragraph1}
+This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. 
+
+To write a sub-paragraph use sub-paragraph command
+\subparagraph{Subpara1}
+This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is \par paragraph1. This is paragraph1. This is paragraph1. This is paragraph1.
+
+\subparagraph{Subpara}This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1. This is paragraph1.
+
+paragraph and subparagraph are just titles!
+
+par command is used for producing a new paragraph on the run. The indentation and spacing are set by the commands
+
+\subsection{Quotes}
+
+To write a quote, use begin quote (for a small one) and begin quotation (for a large one) environment.
+
+\begin{quote}
+Brevity is the soul of wit
+\end{quote}
+
+\begin{quotation}
+I can write a very very very big quotation here!
+\end{quotation}
+
+\subsection{Poetry}
+
+To write a poetry, use begin verse environment.
+
+\begin{verse}
+TWO roads diverged in a yellow wood,\\	
+And sorry I could not travel both,\\	
+And be one traveller, long I stood,\\	
+And looked down one as far as I could,\\	
+To where it bent in the undergrowth;\\
+ 
+Then took the other, as just as fair,\\	
+And having perhaps the better claim,\\	
+Because it was grassy and wanted wear;\\	
+Though as for that the passing there\\	
+Had worn them really about the same,\\
+
+\hfill - Robert Frost
+\end{verse}
+
+\subsection{Description}
+
+To add a description, use begin description environment.
+
+\begin{description}
+\item [stark] House with the sigil Direwolf
+\item [lannister] House with the sigil Lion
+\item [baratheon] House with the sigil Stag
+\end{description}
+
+This is repeatable using enumerate as well, but there is a difference!
+
+\begin{enumerate}
+\item [\textbf{stark}] House with the sigil Direwolf
+\item [\textbf{lannister}] House with the sigil Lion
+\item [\textbf{baratheon}] House with the sigil Stag
+\end{enumerate}
+
+
+\end{document}

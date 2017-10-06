@@ -1,0 +1,35 @@
+## To do
+
+1. install python using anaconda
+2. install a known package
+3. install a channel package
+4. install a bz2 file
+5. Bulk install bz2 files
+6. create an environment
+7. install package in an environment
+8. softlink an environment to use it concurrently with the default python
+
+# added by Anaconda3 4.1.1 installer
+export PATH="/home/arun/anaconda3/bin:$PATH"
+
+# Manually added to use Anaconda Python 2.7
+# sudo ln -s /home/arun/anaconda3/envs/py27env/bin/python /usr/bin/py27on
+# The above symbolic link is added and it is successful
+
+
+Problems with PIP installer
+* Dependency check
+    may not show the required packages
+    Can install them without the dependencies, only to throw error afterwards
+* Maintaining multiple environments is difficult
+* Messes up with system python
+    package upgrade/update/downgrade/uninstall in system python can upset other programs
+
+Advantages of Anaconda installer
+* Lists all dependencies
+    can swap between package versions easily
+    installs dependencies while installing packages
+* Easy swap between environment
+    maintaining environments is easy
+* Does not affect system python!
+    So, system software remains undisturbed

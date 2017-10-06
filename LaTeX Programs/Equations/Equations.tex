@@ -1,0 +1,56 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Arun Prasaad Gunasekaran}
+\title{Equations}
+\begin{document}
+\maketitle
+
+\begin{eqnarray}
+x^2 + 2x + 1 &=& (x+1)^2\\
+%
+x^3 + 3x^2 + 3x + 1 &=& \nonumber \\
+(x+1)^3
+% Use & for manual alignment
+\end{eqnarray}
+
+\begin{eqnarray*}
+x^2 + 2x + 1 = (x+1)^2\\
+x^3 + 3x^2 + 3x +1 = \\
+\left[(x+1)^3\right]\\
+\left[-(x+1)^3\right]\\
+\left[(x+1)^3\right]\\
+\end{eqnarray*}
+
+\begin{align}
+x^2 + 2x + 1 = (x+1)^2  \\
+x^3 + 3x^2 + 3x +1 = \nonumber \\
+(x+1)^3\\
+\intertext{This is a set of identities in algebra}
+\end{align}
+
+\begin{align*}
+x^2 + 2x + 1 &=& (x+1)^2\\
+x^3 + 3x^2 + 3x +1 &=& \\
+(x+1)^3
+\intertext{This is a set of identities in algebra}
+\end{align*}
+
+\begin{align}
+\label{iden1}
+x^2 + 2x + 1 = (x+1)^2\\
+\label{iden2}
+x^3 + 3x^2 + 3x +1 = \nonumber\\
+\left[(x+1)^3
+-(x+1)^3
+(x+1)^3\right]\intertext{This is a set of identities in algebra}
+\end{align}
+
+Equations \ref{iden1} and \ref{iden2} expands identities
+
+\end{document}

@@ -1,0 +1,35 @@
+# This is the Makefile for creating stats.exe
+
+# This is the fortran compiler
+FC = gfortran
+
+# This variable will give the compiler flags
+FCFLAGS = -c
+
+# This variable will give the linker flags
+LINKER = $(FC) -o
+
+# This variable will give the link flags
+FCLINKS = -g
+
+# This variable stores the object files
+OBJS = stats.o stat_funcs.o
+
+# Program name variable
+PROG = stats.exe
+
+# This line produces the executable
+$(PROG): $(OBJS)
+	$(LINKER) $(PROG) $(OBJS) $(FCLINKS)
+
+# This line produces the stats.o file
+stats.o: stats.f95 stat_funcs.o
+	$(FC) $(FCFLAGS) stats.f95
+
+# This line produces the stats_funcs module and o file
+stat_funcs.o: stat_funcs.f95
+	$(FC) $(FCFLAGS) stat_funcs.f95
+
+# This line is for clean-up
+clean:
+	rm -rf *.exe *.o *~ *.mod

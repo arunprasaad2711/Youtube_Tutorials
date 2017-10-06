@@ -1,0 +1,50 @@
+Installing Linux
+
+Anticipatable problems:
+
+Multi-Boot installation : Linux not loading.
+(some) HP laptops with UEFI Settings:
+    UEFI settings will not allow you to boot Linux.
+    Quick fix: Press F9 to go to boot manager and switch to Linux.
+
+Other laptops:
+    Suggestion 1:
+        Enable Legacy Support while booting and give Legacy support first preference. Switch between Legacy and UEFI boots to switch between OS.
+For windows users:
+    Disable quickstart
+
+**There might be an elegant way. I am listing some harmless ways**
+
+Virtual box installation:
+    VT-x is not available/disabled.
+    Fix: Start BIOS and enable Virtualization in the BIOS.
+    
+Method 1: Multi-boot installation
+* Have atleast one "Empty" Drive of sufficient space
+* Download an iso image of the linux distro 
+* Take a USB drive CD/DVD and "burn" the iso into the drive to make it a bootable device.
+* Go to bios and give preference to bootable device over system Hard Disk Drive.
+* Plug the pendrive or mount the CD/DVD and switch on PC.
+* Linux bootloader will start up
+* Continue to General steps
+
+Method 2: Installing via Virtual box
+* Download an iso image of the linux distro
+* Download and install virtual box.
+* Create a virtual machine with a hard disk, RAM and processors.
+* Mount the iso image in the virtual machine's optical drive.
+* Start the machine; Linux bootloader will start up
+* Continue to General steps
+
+General Steps:
+* Decide if you want to download updates and software from internet while installation.
+* "Delete" the free drive and make it a free space partition.
+* From the free space, create a swap space (size = equal to system RAM) and a Directory called "/" with ext4 journaling file system.
+* [Optional] Create other directories if you want
+* [Important] Review all info about the partition table before finalizing the partition table changes.
+* Set the username, password, computer name, time zone, keyboard layout and a few other basic settings
+* [Important] Review all info and installation
+* Sit back and wait till installation.
+* [IMPORTANT] DO NOT POWER-OFF OR UNPLUG THE CD/DVD/USB DURING THE INSTALLATION
+* When ready, shut down and remove the mountable device.
+* Startup and choose between the installed OS and launch and go on!

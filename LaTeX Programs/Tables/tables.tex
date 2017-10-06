@@ -1,0 +1,55 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Arun Prasaad Gunasekaran}
+\title{Tables}
+\begin{document}
+\maketitle
+
+Table \ref{Tab1} has details of some houses in ASOIAF.
+
+\begin{table}[h]
+\centering
+\caption{Details of Houses in ASOIAF}
+\label{Tab1}
+\begin{tabular}{|r|c|c|c|l|r|c|c|c|}
+\hline
+Sl.no & House & Kingdom & Sigil & Knightship & Leader & Weather & Origins & Capital \\\hline
+1. & Stark & North & Direwolf & None & Eddard & Cold & First men & Winterfell\\\hline \hline
+2. & Baratheon & Crownlands & Stag & Yes & Robert & Normal & Andals & King's Landing\\\hline
+\end{tabular}
+\end{table}
+
+Table \ref{Tab1} has details of some houses in ASOIAF. Table \ref{Tab1} has details of some houses in ASOIAF.Table \ref{Tab1} has details of some houses in ASOIAF.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|r|r|l|c|}
+\hline
+Sl.no & House & Kingdom & Sigil \\\hline
+1. & Stark & North & Direwolf \\\hline
+2. & Baratheon & Crownlands & Stag \\\hline
+3. & Blackfyre & \multicolumn{2}{c|}{Not Applicable}\\\hline
+4. & Targeryen & Valyria & Dragon\\
+\cline{2-3}
+ &  & Crownlands & \\ \hline 
+
+\end{tabular}
+\end{table}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Sno & House & Leader & Captial & Sigil \\ 
+\hline 
+1 & Stark & Eddard & Winterfell & Direwolf \\ 
+\hline 
+2 & Martell & Doran & Dorne & Sun \\ 
+\hline 
+\end{tabular} 
+
+\end{document}

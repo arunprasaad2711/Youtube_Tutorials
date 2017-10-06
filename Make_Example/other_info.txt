@@ -1,0 +1,9 @@
+
+Other things to learn in make
+
+Phony Target
+Usage of Directories
+Auto detect compiler flags
+Default Makefile variables
+Multiple Makefile definitions
+............

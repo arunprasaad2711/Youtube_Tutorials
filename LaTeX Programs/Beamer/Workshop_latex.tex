@@ -1,0 +1,573 @@
+\documentclass[10pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+\lstset{language=Python,basicstyle=\ttm,
+numbers=left,
+backgroundcolor=\color{white},
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+stringstyle=\color{deepgreen},
+commentstyle=\color{gray},
+numbersep=5pt,
+numberstyle=\tiny\color{gray},
+keepspaces=true,
+showtabs=true,
+stepnumber=1,
+tabsize=4,                        % Any extra options here
+showstringspaces=false
+}
+
+\author[Arun, CAOS, IISc]{Arun Prasaad Gunasekaran}
+\title{Python Workshop}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+\logo{\includegraphics[scale=0.05]{IISc_logo.jpg}} 
+\institute{Indian Institute of Science} 
+\date{11 August 2015 - 15 August 2015} 
+%\subject{} 
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Preliminary Settings}
+
+\begin{frame}{Preliminary Settings}
+Matplotlib Settings:
+	\begin{enumerate}
+		\item Go to Spyder$>$Tools$>$Preferences$>$Ipython Console$>$Graphics
+		\item Select Activate support
+		\item Set backend to Qt or Tkinter (Qt)
+		\item Got to Advanced Settings
+		\item Select Greedy Completer
+		\item Press apply and ok.
+		\item Go to the ipython console and type \% matplotlib qt
+		\item Set the Working Directory in the File Explorer.
+		\item Copy the path of the Working Directory
+		\item type cd (in the ipython console) and paste the path and enter
+		\item Keep cursor near any command and press Ctrl+I for documentation.
+	\end{enumerate}
+\end{frame}
+
+\section{Sample Program}
+\begin{frame}[fragile]{A sample python program}
+	\begin{lstlisting}
+	# This is a single line comment
+	"""
+	    Program to find the factorial of a number.
+	    This is also a docstring or a document string
+	"""
+	n = input("Enter a positive integer") # To get user input data
+	f = 1                                 # To initialize the fact value
+	if n is 1 or 0:                       # To check if n is 0 or 1
+	    exit                              # To exit the if statement
+	else:                                 # To proceed further
+	    for i in range(2, n+1):           # To start a loop from 2 to n.
+	        f = f*i                       # Also written as f *= i
+	print "The value of {}! is {}".format(n, f)
+	\end{lstlisting}
+\end{frame}
+\section{Features}
+\begin{frame}[fragile]{Breaking it down - Comments}
+Comment - Lines that are ignored when the program is run. Used for excluding codes and for including messages.
+	\begin{lstlisting}
+	# This is a single line comment
+	# Comment begins with a hash # symbol
+	\end{lstlisting}
+Docstrings - Document strings. Multi-line comments. But more useful for including help/direction messages that appear when help utilities are called.
+	\begin{lstlisting}
+	"""
+	    This is a Docstring. It starts and ends with 
+	    triple " or triple ' quotes. Mix and match does not work!
+	"""
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Breaking it down - input}
+Input command - Used for getting input from user to a variable.
+	\begin{lstlisting}
+	n = input('Enter the value for n') # Dynamic input
+	n = raw_input('Enter the value for n') # Raw input - string by default
+	n = float(raw_input('Enter the value for n')) # Type casted input
+	\end{lstlisting}
+Dynamic input analyses the data and assumes data type automatically. \\
+Raw input takes the data as strings. Ignores assuming data type. \\
+Type casting is used to control data types.
+\end{frame}
+
+\begin{frame}[fragile]{Breaking it down - Simple Variables}
+These are the standard variables and primary data types.
+
+	\begin{lstlisting}
+		i = 1 # Integer. Stores integers
+		r = 5.78 # Floats. Stores numbers with decimal parts.
+		c = 'h' # Characters. Stores single characters
+		s = 'Strings' # Strings. Stores a series of characters
+		l = True/False # Logical. Stores binary values
+	\end{lstlisting}
+	Strings and characters use both single and double quotes, but must end accordingly. Use slash to place quotes if needed.
+	\begin{lstlisting}
+		"Hello", 'Hello', 'My name is JD', "I asked, 'what is for lunch?'"
+		'I exclaimed, "This tree is big!"'
+		"I used slash \" to type a double quote symbol"
+	\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{Breaking it down - Variable nature}
+	A variable in python can have any data type. It can be modified at any level to have a new data type. This is because variables are actually ``objects" in python.
+	\begin{columns}[t]
+	\column{0.4\linewidth}
+	Code:
+	\begin{lstlisting}
+		a = 1.5     # Float/Real
+		print a, id(a), type(a)
+		a = "hello" # String/Character
+		print a, id(a), type(a)
+		a = 5       # Integer
+		print a, id(a), type(a)
+		a = True    # Logical
+		print a, id(a), type(a)
+		a = [7, 8.9, 10] # List
+		print a, id(a), type(a)
+		a = (5.2, 4, 12) # Tuple
+		print a, id(a), type(a)
+		a = {'v1': 6, 'v2' : 10} # Dictionary
+		print a, id(a), type(a)
+	\end{lstlisting}
+	\column{0.4\linewidth}
+	Output:
+	\begin{lstlisting}
+		1.5 48132648 <type 'float'>
+		hello 140517035372048 <type 'str'>
+		5 17809656 <type 'int'>
+		True 140517173074128 <type 'bool'>
+		[7, 8.9, 10] 140515599545264 
+		<type 'list'>
+		(5.2, 4, 12) 140515599725824 
+		<type 'tuple'>
+		{'v1': 6, 'v2': 10} 
+		140515599649880 <type 'dict'>
+	\end{lstlisting}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Breaking it down - operators}
+	\begin{columns}[t]
+	\column{0.4\linewidth}
+	Operators:
+	\begin{lstlisting}
+		a + b
+		a - b
+		a * b
+		a / b
+		a += b # a = a+b
+		a *= b # -=, /= exists
+		a ** b
+		()
+		a % b
+		or, and, not
+		is, is not
+		in, in, not in
+	\end{lstlisting}
+	\column{0.4\linewidth}
+	Operations:
+	\begin{lstlisting}
+		Addition
+		Subtraction
+		Multiplication
+		Division
+		Increment addition
+		Increment multiplication
+		Exponent
+		Parenthesis
+		Modulo Operation
+		Logical Operators
+		Identity Operators
+		Membership Operators
+	\end{lstlisting}
+	\end{columns}
+	There are many more! Remember UPEMDAS REL LOG
+\end{frame}
+\section{Advanced Variables}
+\begin{frame}[fragile]{List Variables}
+\textbf{Mutable}, multi-datatype arrays. Can be single levelled or multi-levelled. Enclosed by [].
+
+\begin{lstlisting}
+	x = [1, 3, 5, 7, 8]
+	y = [1.5, 5, 8.94, -5.78]
+	z = [1, 'f', True, [6.45, "six"], False ]
+	l = [ 1, 3.5, 'a', "hello", ['34', 3.14, ["three"], 4], 4.21 ]
+\end{lstlisting}
+
+They allow lists within lists. Indexing goes from 0.
+\end{frame}
+
+\begin{frame}[fragile]{List Variable Indices}
+\begin{columns}[t]
+	\column{0.2\linewidth}
+	Code:
+	\begin{lstlisting}
+		print "x = ",x
+		print "y = ",y
+		print "z = ",z
+		print "l = ",l
+		print x[0]
+		print x[4]
+		print y[4]
+		print z[3][1]
+		print l[4][2][0]
+	\end{lstlisting}
+	\column{0.65\linewidth}
+	Output:
+	\begin{lstlisting}
+		x =  [1, 3, 5, 7, 8]
+		y =  [1.5, 5, 8.94, -5.78]
+		z =  [1, 'f', True, [6.45, 'six'], False]
+		l =  [1, 3.5, 'a', 'hello', ['34', 3.14, ['three'], 4], 4.21]
+		1
+		8
+		IndexError: list index out of range
+		six
+		three
+	\end{lstlisting}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Tuple Variables}
+\textbf{Immutable}, multi-datatype arrays. Can be single levelled or multi-levelled. Enclosed by ().
+
+\begin{lstlisting}
+	x = (1, 3, 5, 7, 8)
+	y = (1.5, 5, 8.94, -5.78)
+	z = (1, 'f', True, (6.45, "six"), False )
+	l = ( 1, 3.5, 'a', "hello", ('34', 3.14, ("three"), 4), 4.21 )
+\end{lstlisting}
+
+They allow tuples within tuples. Indexing goes from 0.
+\end{frame}
+
+\begin{frame}[fragile]{Tuple Variable Indices}
+\begin{columns}[t]
+	\column{0.2\linewidth}
+	Code:
+	\begin{lstlisting}
+		print "x = ",x
+		print "y = ",y
+		print "z = ",z
+		print "l = ",l
+		print x[0]
+		print x[4]
+		print y[4]
+		print z[3][1]
+		print l[4][2][0]
+	\end{lstlisting}
+	\column{0.65\linewidth}
+	Output:
+	\begin{lstlisting}
+		x =  (1, 3, 5, 7, 8)
+		y =  (1.5, 5, 8.94, -5.78)
+		z =  (1, 'f', True, (6.45, 'six'), False)
+		l =  (1, 3.5, 'a', 'hello', ('34', 3.14, ('three'), 4), 4.21)
+		1
+		8
+		IndexError: tuple index out of range
+		six
+		three
+	\end{lstlisting}
+\end{columns}
+\end{frame}
+\subsection{Mutation}
+\begin{frame}[fragile]{Mutable - Immutable}
+Since variables are objects in python, sometimes, multiple variables point to the same memory location. Sometimes, certain memory modifications done to one variable replicates in others (Mutable). Sometimes they do not (Immutable).
+
+\begin{columns}[t]
+	\column{0.45\linewidth}
+	Code:
+\begin{lstlisting}
+	x = [4.5, 6.7]
+	y = x
+	x.append(1)
+	print x, y
+	
+	x = (4.5, 6.7)
+	y = x
+	x.append(1) # Produces an error
+	print x, y
+\end{lstlisting} 
+	\column{0.45\linewidth}
+	Output:
+\begin{lstlisting}
+	[4.5, 6.7, 1] [4.5, 6.7, 1]
+	
+	AttributeError: 'tuple' object has 
+	no attribute 'append'
+	(4.5, 6.7) (4.5, 6.7)
+\end{lstlisting}
+Floats, strings, characters, integers, tuples are immutable. Only list is mutable.
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{Switching data and Mutation...}
+However, switching data and mutation do not cause any issue.
+
+\begin{columns}[t]
+	\column{0.45\linewidth}
+	Code:
+\begin{lstlisting}
+	x = [4.5, 6.7]
+	y = x
+	y = [7.8, 9.6]
+	print x, y
+	
+	x = (4.5, 6.7)
+	y = x
+	y = (7.8, 9.6)
+	print x, y
+\end{lstlisting} 
+	\column{0.45\linewidth}
+	Output:
+\begin{lstlisting}
+	[4.5, 6.7] [7.8, 9.6]
+	
+	(4.5, 6.7) (7.8, 9.6)
+\end{lstlisting}
+
+Still, there is a problem with list and tuples. They are heterogeneous data arrays. We need homogeneous data arrays for scientific calculations. That is where \textbf{numpy arrays} come in handy.
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{Dictionary}
+
+A composite collection of different primary and derived data types. \textbf{Imagine a wallet/bag having several items as an example}. Has \textbf{keys} and corresponding \textbf{values}. Keys are the names/identifiers while values are the data. (Lists, tuples, arrays, integers, floats etc.,). Used for consolidating data into files.
+\begin{columns}[t]
+	\column{0.45\linewidth}
+	Code:
+\begin{lstlisting}
+	a = {'v1':6, 'v2':10, 'lst': \
+	    [5.8, "hello"]}
+	print a
+	print a['v1']
+	print a['lst']
+	print a['lst'][1]
+\end{lstlisting}
+	\column{0.45\linewidth}
+	Output:
+\begin{lstlisting}
+	{'v1': 6, 'v2': 10, 'lst':
+	    [5.8, 'hello']}
+	6
+	[5.8, 'hello']
+	hello
+\end{lstlisting}	
+	\end{columns}
+\end{frame}
+
+\subsection{Type Casting}
+\begin{frame}[fragile]{Type Casting}
+Used for data conversion. Also used to avoid mutation. Restriction of data entry is also possible.
+
+\begin{columns}[t]
+	\column{0.45\linewidth}
+	Code:
+\begin{lstlisting}
+	import numpy as np
+	a = 5
+	b = [5, 7.9, 3.4]
+	print int(a), type(int(a))           
+	print float(a), type(float(a))       
+	print chr(a), type(chr(a))          
+	print str(a), type(str(a))          
+	print bool(a), type(bool(a))        
+	print list(b), type(list(b))         
+	print tuple(b), type(tuple(b))       
+	print np.array(b), type(np.array(b))
+\end{lstlisting}
+	\column{0.45\linewidth}
+	Output:
+\begin{lstlisting}
+	5 <type 'int'>
+	5.0 <type 'float'>
+	CR <type 'str'> # Not actual value
+	5 <type 'str'>
+	True <type 'bool'>
+	[5, 7.9, 3.4] <type 'list'>
+	(5, 7.9, 3.4) <type 'tuple'>
+	[ 5.   7.9  3.4] 
+	<type 'numpy.ndarray'>
+\end{lstlisting}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Numpy Arrays}
+Comes from a module numpy. Homogeneous data type array. Automatically assumes data type. But can be manually set too. Needs numpy module. Inputs can be lists or tuples.
+
+\begin{columns}[t]
+	\column{0.45\linewidth}
+	Code:
+\begin{lstlisting}
+	import numpy as np
+	l = [5, 7, 9]
+	t = (5, 7, 9.7)
+	a = np.array(l)
+	b = np.array(t)
+	print type(l)
+	print type(t)
+	print type(a)
+	print type(b)
+	print np.dtype(a[2])
+	print np.dtype(b[1])
+\end{lstlisting}
+	\column{0.45\linewidth}
+	Output:
+\begin{lstlisting}
+	<type 'list'>
+	<type 'tuple'>
+	<type 'numpy.ndarray'>
+	<type 'numpy.ndarray'>
+	int64  # Signed int with 64 bits
+	float64 # Signed float with 64 bits
+\end{lstlisting}
+As you see, the data types are allocated automatically. Use \textbf{dtype} inside \textbf{np.array} to set the data type manually.
+\begin{lstlisting}
+	a = np.array(l, dtype=np.float32)
+\end{lstlisting}
+	\end{columns}
+\end{frame}
+\section{Loops and Decision Statements}
+\begin{frame}[fragile]{For and While Loops}
+	\begin{lstlisting}
+		for i in range(0, 11, 2):
+		    print i
+		# Note the indent! Break in indent means end out statements within loop.
+		# range function delivers values from 0 to 10 in steps of 2
+		# i takes one value in each iteration
+		vp = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+		for val in vp:
+		    print "Val = ", val
+		    for num in val:
+		        print num
+		        # continue # to go to next iteration
+		        # break # to break the loop
+		i = 0 # i has to be initialized for the while loop
+		while i in range(0, 11):
+		    print i
+	\end{lstlisting}
+	\textbf{A volunteer to predict the output!}\\
+	Nested loops (one within the other is possible)
+\end{frame}
+
+\begin{frame}[fragile]{If Clause with an example}
+\begin{lstlisting}
+	f = 1
+	n = input("Enter a value for n:")
+	if isinstance(n, int): # Checks whether the value is integer or not
+    if n is 1 or 0:
+        print "Execution at if"
+        print "The value of {}! = {}".format(n, f)
+        exit
+    elif n<0:
+        print "Execution at elif"
+        print "n is negative!"
+    else:
+        print "Execution at else"
+        for i in range(2, n+1):
+            f *= i
+        print "The value of {}! = {}".format(n, f)
+else:
+    print "Factorial does not exist"
+\end{lstlisting}
+
+\end{frame}
+
+\section{Functions}
+
+\begin{frame}[fragile]{Defining Functions}
+Data independent functions. But make use of this feature wisely.
+\end{frame}
+
+\section{Exercises}
+\begin{frame}{Exercises}
+\centering
+Exercises
+\end{frame}
+
+\begin{frame}{Problem 1 - Easy!}
+Find the first 12 Fibonacci numbers. \\ In a Fibonacci series/sequence, if $F_n$ is the $n^{th}$ term of the series, (provided $n \ge 2$) then it can be given in terms of the previous 2 terms, $F_{n-1}$ and $F_{n-2}$ by the recurrence relation,
+$$ F_n = F_{n-1} + F_{n-2}$$
+Find all the values till 12th term ($F_{12}$), save them and print them using loops. Take $F_0$ = 0 and $F_1$ = 1. \textbf{Use numpy arrays. Set the data type to be int8. Do you notice anything strange? Set the data type to be int16 and repeat. Do you notice anything strange?} If yes/no, can you guess what could be the reason?
+\end{frame}
+
+\begin{frame}{Problem 2 - Hard and Long!}
+The table shows the plot of relative humidity and altitude. Assume surface temperature $T_S = 30^\circ\ C$ and $P_S = 10^5\ Pa$. Use SI units in calculation.
+\begin{table}
+\centering
+\caption{Altitude Vs RH Measurement}
+\label{ZvsRH}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Z (km)  & 0  & 0.1 & 0.3 & 0.5 & 1  & 2  & 3  & 4   & 5  & 6  & 7  & 8 & 9 & 10 \\ \hline
+RH (\%) & 60 & 70  & 80  & 75  & 60 & 50 & 80 & 90 & 60 & 40 & 20 & 5 & 2 & 1  \\ \hline
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Calculate e(z) which is given by $e = \frac{RH\times\ e_s}{100}$ . (Use \% values of RH directly)
+	\item Calculate T(z) which is given by $T = T_S - \frac{gZ}{C_p}$, where $g = 9.806\ m/s^2$ and $C_p = 1005\ J/kgK$
+	\item Calculate $\rho$(z) which is given by $\rho = \frac{P}{RT}$
+	\item Calculate P(z) which is given by $P = P_s\exp{\frac{-gZ}{RT}}$, where $R = 287\ J/kgK$
+	\item Calculate q(z) which is given by $q = 0.622\left[\ \frac{e}{P} \right]$
+	\item Calculate $e_s(Z)$ which is given by $e_s = A\exp{\left[-\frac{B}{T}\right]}$. Where, $A = 2.53\times10^{11}\ Pa$ and $B = 5420\ K$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Problem 2 Continued ...}
+	\begin{itemize}
+		\item Calculate W(z), given by $W = q\times\ \rho$
+		\item Calculate h(z), given by $h = Lq + C_pT$. Where $L_q = 2.5006\times\ 10^6\ J/kg$. (Use T in K here)
+		\item Calculate MSE(z), given by $MSE = h + gZ$
+		\item Calculate Velocity v(z), which is given by the relation, $v = v_0\left(\exp\left[\frac{Z}{Z_s}\right] - 1\right)$, where, $Z_s = \frac{RT_s}{g}$ (Where $T_s$ is in Kelvin) and $v_0 = 100\ m/s$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Next Session ...}
+	\begin{itemize}
+		\item Extracting Data from text/excel files
+		\item Saving in matrix files (.mat)
+		\item 1-D Plotting
+		\item Advanced Mathematical Operations
+		\item Interactive 2-D Plotting
+		\item Some algorithms
+		\item Plot Enhancements
+	\end{itemize}
+
+\end{frame}
+
+\end{document}

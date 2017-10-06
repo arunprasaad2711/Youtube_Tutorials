@@ -1,0 +1,83 @@
+\documentclass[10pt,a4paper,twoside]{article}
+% Document Class
+% Preamble
+\usepackage[utf8]{inputenc}
+% Setting the input encoding
+\usepackage[english]{babel}
+% The input language
+
+% symbol is used for typing comments
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% For including mathematical symbols
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+% Used for shaping the size of the page
+
+\author{Arun Prasaad Gunasekaran}
+\title{Introduction to LaTeX}
+
+\begin{document}
+\maketitle
+% Used for creating the title
+Hello! This is my first LaTeX document! 
+
+LaTeX files have many extensions!
+This is a bullet list!
+\begin{itemize}
+\item .tex = TeX file. The core file and the most important file. All contents are written/typed within this file.
+\item .bib bibliography files. It has the attributes and meta data (author's name, title, pages, abstract, year of publication ....)
+\item .log Log file. It contains all the errors, warnings, execution messages, steps while compiling, etc.,
+\item .aux .gz support files that come when a .tex file is executed.
+\item .sty style format files. They contain TeX instructions and and formats to be included in the file.
+\item .bst this is a style file for bibliography.
+\item .toc this is a table of contents file
+\item .cls class files.
+\end{itemize}
+
+This is a numbered list!
+\begin{enumerate}
+\item .tex = TeX file. The core file and the most important file. All contents are written/typed within this file.
+\item .bib bibliography files. It has the attributes and meta data (author's name, title, pages, abstract, year of publication ....)
+\item .log Log file. It contains all the errors, warnings, execution messages, steps while compiling, etc.,
+\item .aux .gz support files that come when a .tex file is executed.
+\item .sty style format files. They contain TeX instructions and and formats to be included in the file.
+\item .bst this is a style file for bibliography.
+\item .toc this is a table of contents file
+\item .cls class files.
+\end{enumerate}
+
+Symbols:
+Symbols in LaTeX are pre-assigned. So, you cannot use them directly.
+Use backslash symbol to type the characters.
+eg: \$ \% \&
+
+Parenthesis:
+Circular/Round brackets do not have any meaning. (). Square brackets have meaning in commands, but they can stand alone. [].
+
+But! flower/curly brackets are reserved. You cannot print them directly! {}
+To print them, use backslash \{ \}.
+
+In commands, [] are used for filling optional arguments/instructions, whereas \{\} brackets are used for filling the command name.
+
+use package commands are used for including special packages into the file (they add more features to the document)
+
+The document structure is as follows
+
+document class
+
+use packages
+definitions and macros
+title page contents
+
+document beginning
+
+contents of the documents
+
+document ending
+
+ignored extras
+
+\end{document}

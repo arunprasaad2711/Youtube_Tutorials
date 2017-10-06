@@ -1,0 +1,130 @@
+%\documentclass[]{beamer}
+%\documentclass[brown]{beamer} %To change the colour of the entire document
+\documentclass[handout]{beamer} % To stop Animation in presentation
+
+\usepackage{graphicx}
+
+%\title{Demo on Beamer \\ Making a Presentation using \LaTeX}
+
+%\author{Arun Prasaad \\ Extra Contents1 \\ Extra Contents2 \\ Extra Contents1 \\ Extra Contents1 \\Extra Contents1}
+
+\title[Beamer \hspace{5mm} \insertframenumber / \inserttotalframenumber]{Demo on Beamer \\ Making a Presentation using \LaTeX}
+\author[Arun, YouTube]{Arun Prasaad \\ Extra Contents1 \\ Extra Contents2}
+\date{\today  \\ YouTube}
+
+%\usetheme{CambridgeUS} % Theme Command
+% Themes are
+% AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla
+% boxes, CambridgeUS, Copenhagen, Darmstadt, 
+% default, Dresden, Frankfurt, Goettingen, Hannover, 
+% Ilmenau, JuanLesPins, Luebeck, Madrid, Malmoe, 
+% Marburg, Montpellier, PaloAlto, Pittsburgh, 
+% Rochester, Singapore, Szeged, Warsaw
+
+%\usecolortheme{beaver} % Theme Colour
+% Colour themes are
+% albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose, 
+% seagull, seahorse, sidebartab, structure, whale, wolverine
+
+
+\usepackage{beamerthemesplit} % Basic Banners
+\usepackage{beamerthemeshadow} % Basic Shadow theme
+
+%\usebeamerfont{structuresmallcapsserif}
+% default, professionalfonts
+% serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+% logo
+\logo{\includegraphics[height=10mm]{IISc_logo.jpg}}
+
+% Change the alerted colour
+\setbeamercolor{alerted text}{fg=blue}
+
+%\usepackage{minted}
+
+\begin{document}
+
+% Changing overall font properties
+%\sffamily \bfseries
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline} %TOC page with title
+	\tableofcontents
+\end{frame}
+
+
+\section{Preliminary Settings}
+
+\begin{frame}{Preliminary Settings}
+	Matplotlib Settings:
+	\begin{enumerate}
+		\item Go to Spyder$>$Tools$>$Preferences$>$Ipython Console$>$Graphics
+		\item Select Activate support
+		\item {\color{red} Set backend to Qt or Tkinter (Qt)}
+		\item Got to Advanced Settings
+		\item Select Greedy Completer
+		\item Press apply and ok.
+		\item Go to the ipython console and type \% matplotlib qt
+		\item Set the Working Directory in the File Explorer.
+		\item Copy the path of the Working Directory
+		\item type cd (in the ipython console) and paste the path and enter
+		\item Keep cursor near any command and press Ctrl+I for documentation.
+	\end{enumerate}
+\end{frame}
+
+\section{Animation}
+
+\subsection{Animation 0}
+\begin{frame}{Animation 0}
+	first \pause second \pause third \pause fourth
+\end{frame}
+
+\subsection{Animation 1}
+\begin{frame}{Animation 1}
+	\only<1>{first}\only<2>{second}
+	
+	\onslide<3>{third} \onslide<4>{fourth}
+\end{frame}
+
+\subsection{Animation 2}
+\begin{frame}{Animation 2}
+	\begin{enumerate}
+		\item <+-|alert@+> Go to Spyder$>$Tools$>$Preferences$>$Ipython Console$>$Graphics
+		%\pause
+		\item  <+-|alert@+> Select Activate support
+		%\pause %<+-!alert@+>
+		\item  <+-|alert@+> {\color{red} Set backend to Qt or Tkinter (Qt)}
+		%\pause %<+-!alert@+>
+		\item  <+-|alert@+> Got to Advanced Settings
+		%\pause
+		\item  <+-|alert@+> Select Greedy Completer
+		%\pause
+		\item  <+-|alert@+> Press apply and ok.
+		%\pause
+		\item  <+-> Go to the ipython console and type \% matplotlib qt
+		%\pause
+		\item  <+-> Set the Working Directory in the File Explorer.
+		%\pause
+		\item  <+-> Copy the path of the Working Directory
+		%\pause
+		\item  <+-> type cd (in the ipython console) and paste the path and enter
+		%\pause
+		\item <+->  Keep cursor near any command and press Ctrl+I for documentation.
+	\end{enumerate}
+\end{frame}
+
+\section{Two Columns}
+\begin{frame}{Two Columns}
+	\begin{minipage}[l]{0.45\textwidth}
+		This is a logo!
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.45\linewidth}
+			\includegraphics[scale=0.32]{IISc_logo.jpg}
+	\end{minipage}
+\end{frame}
+
+\end{document}

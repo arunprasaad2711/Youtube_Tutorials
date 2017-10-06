@@ -1,0 +1,46 @@
+Distro Tour Disclaimers and Heads ups!
+
+* This is not a full review! rather, it is a brief tour about the distro
+    > Hence, I might have left some features unexplained knowingly or unknowingly.
+    > However, if there is a special feature that I did not mention, 
+      let me know!
+
+* The distro tours are for "getting a feel and idea" about the distro.
+    > So, I might not be going too technical.
+    > These videos are meant to "throw some light" for people who are entering
+      linux and/or want to know about the linux distros in general.
+    > As a result, do not form a strong opinion based on the tours. Do follow it
+      up with your own research by hearing from other sources authentic.
+    
+* The distros choose to tour on are based on my interests.
+    > Hence, if i hear a lot of interesting info about a particular distro, 
+      or, if i find some distros interesting on my own research, then I might
+      give you all a tour on.
+    > If you have any specific Linux Distro that you want me to look at, then
+      add them as a comment in the video description. I might look at it in the future.
+
+* All my comments and the critics about the distros are purely my views based on
+  my experience, learning and research.
+    > So, there is a chance that you might disagree on certain aspects or 
+      details I might mention. 
+    > While I totally agree that differences of opinion are possible, if you 
+      have any, you can post it as a comment in a polite manner.
+
+* I (usually) run the distros in virtualbox and hence the performance might vary
+  significantly sometimes and very little sometimes against running in actual
+  hardware. (And sometimes, I might run them in actual hardware)
+    > Also, sometimes certain bugs and issues might pop-up because of the virtualbox
+      and might not pop-up because of the virtualbox!
+    > Also, the performance might/can vary based on the hardware.
+
+* There is no perfect linux distro or linux desktop!
+    > Each Linux Distro and Desktop has their own target audience, pros and cons,
+      purpose for it's existence etc.,
+    > So, you are welcome to experiment with the distros and pick the one that 
+      suits your needs and requirements.
+
+* I will do my best to provide you the information as factually accurate as possible.
+    > If suppose there is a mistake or I am wrong, let me know.
+
+* Sometimes, installing distros in hardware can be problematic.
+    > So, have the instructions closeby and TAKE A BACKUP OF YOUR DATA FOR SAFETY!

@@ -1,0 +1,49 @@
+Explanation of gauss elimination
+Ax = b m  unknowns and m equations
+mX(m+1) augment matrix:
+
+| a11  a12  a13 ... a1m : b1 |
+| a21  a22  a23 ... a2m : b2 |
+| a31  a32  a33 ... a3m : b3 |
+| ...  ...  ... ... ... : .. |
+| am1  am2  am3 ... amm : bm |
+
+First set  say i=1  (i for set) with linear combination as row 1
+Row 2 j = 2  (j for rows)
+
+a21 = a21 - a11*a21/a11   k for column k = 1
+a22 = a22 - a12*a21/a11                k = 2
+a23 = a23 - a13*a21/a11                k = 3
+............................................
+a2m = a2m - a1m*a21/a11                k = m
+b2  = b2  - b1 *a21/a11                k = m+1
+
+Row 3 j = 3
+
+a31 = a31 - a11*a31/a11   k for column k = 1
+a32 = a32 - a12*a31/a11                k = 2
+a33 = a33 - a13*a31/a11                k = 3
+............................................
+a3m = a3m - a1m*a31/a11                k = m
+b3  = b3  - b1 *a31/a11                k = m+1
+
+continued till last row, or j = m
+
+Second set i = 2 with linear combination from row 2
+Row 3 j = 3
+.... k = 2 to m+1
+Row 4 j = 4
+.... k = 2 to m+1
+.....
+....
+
+third set i = 3 j = 4 to m
+fourth set i = 4
+
+set m-1 i = m-1
+ i = 1, m-1
+    j = i+1, m
+        k = i , m+1
+            aib(j,k) = aib(j,k) - aib(i,k)*aib(j,i)/aib(i,i)
+            end end end
+

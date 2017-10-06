@@ -1,0 +1,8 @@
+stats.exe: stat_funcs.o stats.o
+	gfortran -o stats.exe stat_funcs.o stats.o
+
+stats.o: stats.f95 stat_funcs.o
+	gfortran -c stats.f95
+
+stat_funcs.o: stat_funcs.f95
+	gfortran -c stat_funcs.f95

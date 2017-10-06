@@ -1,0 +1,53 @@
+Fixed-Format files:
+    - Follows the punch-card format of old programming practices (prior to 1960's)
+    - Strict 72/80 characters per line rule
+        + In any line, you can have only 72/80 characters. Anything extra has to
+          be moved to the next line!
+    - Positions carry a significance
+        + comments must begin at column 1 or after statement ends! or after column 7
+        + actual commands must begin after 6 spaces!
+        + Tabs can throw annoying warnings and are not recommended. Use spaces!
+        + Line continuation character must be placed between columns 1 to 6
+
+eg : .f, .ftn, .for, .f77, .F, .F77, .FTN, .F, .FOR
+
+Free-Format files:
+    - Punch-card format is ruled out
+    - No 72/80 characters per line rule
+    - Positions do not carry any significance and restrictions are removed
+    - Tabs can be used instead of spaces. They might throw warnings, but are
+      not errors!
+    - Some changes in the syntax (but not to a great extend)
+    - Still, you can follow the fixed format style if you wish!
+    
+eg : .f90, .f95, .f03, .f08, .F90, .F95, .F03, .F08
+
+Lower case extensions may not allow pre-processor directives!
+eg : .f90, .f95, .f03, .f08, .f, .ftn, .for, .f77
+
+Upper case extensions allow pre-processor directives! You can produce lower-case
+extension files from them!
+eg : .F90, .F95, .F03, .F08, .F, .FTN, .FOR, .F77
+
+Fixed formats are usually Fortran 77 or Fortran 1977
+
+Free formats are usually advanced fortran and modern fortran
+
+Legacy Fortran
+.f, .F, .f77 and .F77 > Fortran 77 or Fortran 1977
+
+Advanced Fortran
+.f90 and .F90 > Fortran 90 or Fortran 1990
+.f95 and .F95 > Fortran 95 or Fortran 1995
+
+Modern Fortran
+.f03 and .F03 > Fortran 03 or Fortran 2003
+.f08 and .F08 > Fortran 08 or Fortran 2008
+
+Speculative extension
+.f15 and .F15 > Fortran 15 or Fortran 2015
+
+Fortran programs prior to Fortran 77 (like fortran 66, fortran 4, fortran 3, 
+fortran 2 and fortran 1) are (for most practical purposes) obsolete and extinct!
+
+

@@ -1,0 +1,160 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx} % Include this for including Images
+\usepackage{subcaption}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Arun Prasaad Gunasekaran}
+\title{Arrays and Tabbing}
+\begin{document}
+\maketitle
+
+Hello!
+
+$$
+\begin{array}{|c|l|c|r|}
+\hline
+1 & 2 & 3 & 4 \\\hline
+5 & 6 & 7 & 8 \\
+
+\end{array}
+$$
+
+\begin{tabbing}
+
+Column 1 \= 8 \= Column 2 \\
+Column 5      \>      Column 6
+
+\end{tabbing}
+
+$$
+\begin{matrix}
+a & b & c \\
+d & e & f & g \\
+\end{matrix}
+$$
+
+$$
+\begin{pmatrix}
+a & a^2 & \cdots & a^n \\
+b & b^2 & \cdots & b^n \\
+\vdots & & \ddots \\
+n & n^2 & \cdots & n^n
+\end{pmatrix}
+$$
+
+$$
+\begin{bmatrix}
+a & a^2 & \cdots & a^n \\
+b & b^2 & \cdots & b^n \\
+\vdots & & \ddots \\
+n & n^2 & \cdots & n^n
+\end{bmatrix}
+$$
+
+$$
+\begin{vmatrix}
+a & a^2 & \cdots & a^n \\
+b & b^2 & \cdots & b^n \\
+\vdots & & \ddots \\
+n & n^2 & \cdots & n^n
+\end{vmatrix}
+$$
+
+$$
+\begin{Vmatrix}
+a | & a^2 | & \cdots | & a^n \\\hline
+b & b^2 & \cdots & b^n \\
+\vdots & & \ddots \\
+n & n^2 & \cdots & n^n
+\end{Vmatrix}
+$$
+
+\begin{figure}
+\centering
+\includegraphics[scale=1.0]{IISc_logo.jpg}
+\caption{This is the logo of my Former Institute}  % for figures, the caption/title is given, usually after the figure
+\label{reference}        % the label should be given after caption.
+% The allowed extensions are .png, .jpeg, .pdf, .eps, (Needs eps2pdf package) .giff, .jpg
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{IISc_logo.jpg}
+\caption{figure title}  % for figures, the caption/title is given, usually after the figure
+\label{reference1}        % the label should be given after caption.
+
+% The allowed extensions are .png, .jpeg, .pdf, .eps, (Needs eps2pdf package) .giff, .jpg
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=5cm]{IISc_logo.jpg}
+\caption{figure title}  % for figures, the caption/title is given, usually after the figure
+\label{reference2}        % the label should be given after caption.
+
+% The allowed extensions are .png, .jpeg, .pdf, .eps, (Needs eps2pdf package) .giff, .jpg
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=5cm, height=10cm]{IISc_logo.jpg}
+\caption{figure title}  % for figures, the caption/title is given, usually after the figure
+\label{reference3}        % the label should be given after caption.
+
+% The allowed extensions are .png, .jpeg, .pdf, .eps, (Needs eps2pdf package) .giff, .jpg
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[angle=63]{IISc_logo.jpg}
+\caption{figure title}  % for figures, the caption/title is given, usually after the figure
+\label{reference4}        % the label should be given after caption.
+
+% The allowed extensions are .png, .jpeg, .pdf, .eps, (Needs eps2pdf package) .giff, .jpg
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{IISc_logo.jpg}
+\caption{1a}
+\label{fig:sfig1}
+\end{subfigure}
+
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{IISc_logo.jpg}
+\caption{1b}
+\label{fig:sfig2}
+\end{subfigure}
+%
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{IISc_logo.jpg}
+\caption{1c}
+\label{fig:sfig3}
+\end{subfigure}
+
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.8\linewidth]{IISc_logo.jpg}
+\caption{1d}
+\label{fig:sfig4}
+\end{subfigure}
+
+\caption{plots of....}
+\label{fig:fig}
+\end{figure}
+
+
+\end{document}
+
+
+
+
+

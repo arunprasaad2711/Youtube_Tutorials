@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490030301 source:/home/arun/Desktop/C_programs/03_Simple_Data_Types/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

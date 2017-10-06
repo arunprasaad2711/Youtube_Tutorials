@@ -1,0 +1,158 @@
+\documentclass[12pt,oneside]{book}
+%Standard book document Class
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% AMS packages for including mathematical symbols
+
+\usepackage{graphicx}
+% Packags for including pictures and images
+
+\usepackage[lofdepth,lotdepth]{subfig}
+%\usepackage{tabularx}
+% For having a single figure with multiple sub-figures and to enable subcaptions
+
+\usepackage{natbib}
+% Package for enhancing apalike and other default bibliographystyles.
+
+\usepackage{fancyhdr}
+% Package for setting the  header and footer of pages
+
+\usepackage[english]{babel}
+% Package for changing pagenumber type between roman and arabic
+
+\usepackage{url}
+% Package for including urls in bibliography
+
+\usepackage{epstopdf}
+% Package for including eps figures and convert them to pdf and present them
+
+\graphicspath{ {Img/} }
+% Folder where all the pictures are saved
+
+\usepackage[utf8]{inputenc}
+% Package for indicating encoding
+
+\usepackage{setspace}
+\onehalfspacing
+% Package and command to set the spacing in the document
+
+\usepackage[breaklinks=true, bookmarks=true, bookmarksopen=true, colorlinks=true, linkcolor=blue, citecolor=red, pdfhighlight=/P]{hyperref}
+% For including Hyperlinks in the document
+
+\bibliographystyle{apalike}
+% Just a bibliography style
+
+\usepackage[a4paper,top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+%Package for setting up the shape of the page
+
+\pagestyle{fancy}
+% A pre-defined page style in fancyhdr package
+
+\usepackage{makeidx}
+% Package for Making and including Index
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%Header and Footer size re-adjusting commands
+
+%\makeindex
+% Uncomment the above line for making indices
+
+%\usepackage{minted}
+% Use the above package for including source code and syntax colouring with python
+
+% Default fixed font does not support bold face
+%\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+%\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+% These are for creating your own font style for the listings option
+
+% Custom colors
+%\usepackage{color}
+%\definecolor{deepblue}{rgb}{0,0,0.5}
+%\definecolor{deepred}{rgb}{0.6,0,0}
+%\definecolor{deepgreen}{rgb}{0,0.5,0}
+% These are for making colour schemes for the listings options
+
+%\usepackage{listings}
+%\lstset{language=Python,basicstyle=\ttm,
+%	numbers=left,
+%	backgroundcolor=\color{white},
+%	otherkeywords={self},             % Add keywords here
+%	keywordstyle=\ttb\color{deepblue},
+%	stringstyle=\color{deepgreen},
+%	commentstyle=\color{gray},
+%	numbersep=5pt,
+%	numberstyle=\tiny\color{gray},
+%	keepspaces=true,
+%	showtabs=true,
+%	stepnumber=1,
+%	tabsize=4,                        % Any extra options here
+%	showstringspaces=false
+%}
+% Uncomment the above lines to include source code using listings option.
+
+% Compiling the file:
+% pdflatex template1
+% bibtex template1
+% makeindex template1
+% pdflatex template1
+% pdflatex template1
+
+\begin{document}
+
+	\pagenumbering{roman}
+	% For indicating that these sections need roman numbered pages
+	\include{Chapters/titlepage}
+	
+	\chapter*{Acknowledgements}  % * for not numbering the chapter
+	\input{Chap/Acknowledgements}
+	\addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}
+	
+	% add contents line is to indicate the compiler to mention this page in the table of contents
+	
+	\chapter*{Abstract}
+	\input{Chap/Abstract}
+	\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	% Do not affect the page numbering! - unless you know how to fix it!
+	% Do not disturb the \sl and \rm commands in Abstract - unless you know how to fix it!
+	
+	\chapter{Chapter 1}
+	\pagenumbering{arabic} % To change the page numbering to arabic
+	\input{Chap/Chapter1}
+	
+	\chapter{Chapter 2}
+	\input{Chap/Chapter2}
+	
+	\chapter{Chapter 3}
+	\input{Chap/Chapter3}
+	
+	\chapter{Chapter 4}
+	\input{Chap/Chapter4}
+	
+	% Add more chapters in the below format
+	%\chapter{Results}
+	%\input{Chapters/Results}
+	
+	\chapter{Conclusions}
+	\input{Chap/Conclusions}
+
+	% To add appendices, uncomment the below line and proceed like chapters
+	%\appendix
+	%\chapter{Sample Appendix Title}
+	%\input{Chapters/Appendix}
+	
+	\bibliography{bibfile_name}
+	\addcontentsline{toc}{chapter}{\numberline{}Bibliography}
+	
+	% \printindex
+    % \addcontentsline{toc}{chapter}{\numberline{}Index}
+	% Uncomment the above 2 lines for including the indices
+	
+\end{document}

@@ -1,0 +1,23 @@
+! You can write fortran comments!
+! Start namelist with an &
+! namelist names and variables can be in lowercase
+! For fortran 77, they have to be in UPPERCASE
+&list1
+ 
+    year            =   2016   ! Some random year and a random comment
+    
+    ! You can add comments in between data too!
+    MONTH           =   "February" ! Bash comments not allowed!
+    AGE             =   24
+    PIZZA_COST      =   350.00
+    student         =   .TRUE.
+    TEST_SCORES     =   45.0, 56.2, 56.6, 78.9, 78.5,
+        49.6, 45.9, 35.8, 12.6, 19.0 ! And you can break lines!
+        ! Do not use comments in the data stream
+    ! But do not use &. Otherwise, the namelist will be terminated.
+    my_name         =   "Arun"
+    RPI             =   (5.6,7.8)
+    DAY             =   "Tuesday"
+    EYE_COLOUR      =   "Yellow"
+! To terminate, use / or &end
+/

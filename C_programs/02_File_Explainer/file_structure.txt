@@ -1,0 +1,41 @@
+Files and Purposes
+==================
+
+*.h 				header files
+*.c					C files
+*.o					object files
+*.out, *.x, *.exe	executable files
+
+
+Header files:
+	Have global constants
+	Function declarations
+	preprocessor directives
+
+C files:
+	Where we write the main program
+	Write set of functions
+
+Object files:
+	Have the C files translated and compiled into machine language
+	Needed to make executable
+
+Executable files:
+	Has the final application that runs the instructions specified
+	
+#include --- Preprocessor directive - tells C compiler to include definitions
+			 of functions in the specified "filename.c"
+
+Eg:
+	printf function definition is written in some file namely stdio.c
+		and an object file named stdio.o is available in the system
+	declarations of functions in stdio.c are in stdio.h
+	So, including stdio.h tells the compiler to include stdio.o file!
+
+Notes for Future:
+=================	
+* C files without "main function" need custom-made header files.
+* Once the above C files are created and an object file is made, use header files
+	to include the functions of such C files into other programs
+* Once Object files are made, C files are not needed!!!! Header files and Object
+	files are sufficient in the future.

@@ -1,0 +1,22 @@
+In Programs:
+    1. Subroutines and function can be inside them using keyword contains
+    outside the program? yes
+    in a separate file? yes - as modules and separate fortran files
+    
+can a Module be placed inside the program- Not at all!
+outside the program? Yes!
+    on top of the program? Yes
+    Below the program? No
+    in a new file? Yes, but this file has to be compiled first!
+
+Functions and subroutines can have:
+    1. functions and subroutines inside them?! Yes!
+A program and a Module? Not at all!
+Other module functions/subroutines? Yes, use the "Use Module statement"
+
+Module can have:
+    1. functions and subroutines inside them! Yes! Using contains
+A program inside a module? Not possible
+Other module functions and subroutines? Yes! Use the "Use Module statement"
+
+Another module inside a module? No!

@@ -1,0 +1,47 @@
+C Programming Language
+
+	A modern Highlevel compiled programming language
+	Precursor to C++, C#, Cuda C and several other programming languages
+	Used to write apps, software, OS, games, scientific models/software etc.,
+
+Knowing C helps to learn other programming languages faster.
+
+Installation
+	MAC, UNIX and LINUX
+		gcc compiler is pre-installed
+
+	Windows users
+		Windows 10 with anniversary update
+			Windows Subsystem for Linux
+			    sudo apt-get install gcc g++
+		
+		Other windows users
+			Cygwin - Recommended - fully functional GNU/Linux feel
+				install gcc-core, gcc, libgcc, gdb, g++(for c++)
+			Mingw - minimal GNU/Linux feel
+
+Choice of Editors:
+	Code::Blocks  - simplest
+	Any editor combo with terminal, eg: Geany, Gedit, etc.,
+
+Compilers: Plenty of them are available.
+	GCC
+	Clang
+	Intel
+	Siemens
+	PGI
+	Cray
+	NAG
+
+We will be using GCC
+	Easy to work with
+	Has all standard features
+	Free and opensource
+
+Others:
+	Some are commercial
+	Advanced features with Parallel Programming tools
+	Has non standard features
+	(Some) can take advantange of the system architecture
+
+DO NOT MIX AND MATCH COMPILERS!

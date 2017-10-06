@@ -1,0 +1,57 @@
+## Beginning the updation of Python 3 Environment
+conda update conda
+conda update anaconda
+conda install mathjax
+conda install numpy
+conda install scipy
+conda install matplotlib
+conda install basemap
+conda install h5py
+conda install netcdf4
+conda install cython
+conda install setuptools
+conda install pip
+conda install sympy
+conda install ipython
+conda install ipython-qtconsole
+conda install pandas
+conda install ipython-notebook
+conda install jupyter
+conda install pygments
+conda install spyder
+conda install django
+conda install mpi4py
+conda install -c ioos fortran-magic
+conda install -c asmeurer pandoc
+conda install -c ajdawson windspharm
+
+## Beginning the installation of Python 2 Environment
+conda create -n py27env python=2
+conda install -n py27env anaconda
+conda install -n py27env mathjax
+conda install -n py27env numpy
+conda install -n py27env scipy
+conda install -n py27env matplotlib
+conda install -n py27env basemap
+conda install -n py27env h5py
+conda install -n py27env netcdf4
+conda install -n py27env cython
+conda install -n py27env setuptools
+conda install -n py27env pip
+conda install -n py27env sympy
+conda install -n py27env ipython
+conda install -n py27env ipython-qtconsole
+conda install -n py27env pandas
+conda install -n py27env ipython-notebook
+conda install -n py27env jupyter
+conda install -n py27env pygments
+conda install -n py27env spyder
+conda install -n py27env django
+conda install mpi4py
+conda install -n py27env -c ioos fortran-magic
+conda install -n py27env mayavi
+conda install -n py27env --channel ncar --channel khallock pynio pyngl
+conda install -n py27env -c asmeurer pandoc
+conda install -n py27env --channel dbrown --channel khallock ncl
+conda install -n py27env -c ajdawson windspharm
+
