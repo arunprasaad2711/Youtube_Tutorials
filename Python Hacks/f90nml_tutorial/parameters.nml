@@ -1,0 +1,11 @@
+! Fortran Namelist file
+
+&parameters_list
+
+    nx = 101
+    ny = 201
+    g = 9.806
+    nu = 1.5e-5
+    fname = "simple_data.nc"
+
+/
